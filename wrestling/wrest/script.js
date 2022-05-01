@@ -57,7 +57,7 @@ const ppvs =  [
         }
     ];
 
-    const danielBryan =  [
+    const danielBryan =  
         {
             "title":"Daniel Bryan",
             "poster_path":"https://www.wwe.com/f/styles/talent_champion_lg/public/all/2020/01/Daniel_Bryan_Pro--bfcf96f308903d00574ccf88318215f0.png",
@@ -97,8 +97,8 @@ const ppvs =  [
                     "matchvote":"8.33"
                 }
             ]
-        },
-    ];
+        }
+    ;
 
 showPPVs(ppvs)
 
@@ -178,9 +178,10 @@ function showWrestler(data) {
     main.innerHTML = '';
 
     const {title, poster_path, overview, matches} = data;
-    const movieEl = document.createElement('div');
-    movieEl.classList.add('wrestler');
-    movieEl.innerHTML = `<img src="${poster_path}" alt="${title}">
+    console.log(matches, data)
+    const wrestlerEl = document.createElement('div');
+    wrestlerEl.classList.add('wrestler');
+    wrestlerEl.innerHTML = `<img src="${poster_path}" alt="${title}">
 
     <div class="wrestler-info">
         <h3>${title}</h3>
@@ -195,21 +196,22 @@ function showWrestler(data) {
 
     matches.forEach(match => {
         console.log("wrestler")
-        const wrestlerEl = document.createElement('div');
+        const matchEl = document.createElement('div');
 
-        wrestlerEl.innerHTML = `<div class="match">
+        matchEl.innerHTML = `<div class="match">
+        <h4>${match.show}</h4>
             <img src="${match.championimage}" alt="${title}">
             <img src="${match.challengerimage}" alt="${title}">
             <p>${match.champion} vs. ${match.challenger}</p>
             </div>
         `;
 
-        movieEl.appendChild(wrestlerEl)
+        wrestlerEl.appendChild(matchEl)
         
 
     })
     
-    main.appendChild(movieEl);
+    main.appendChild(wrestlerEl);
 
 }
 
