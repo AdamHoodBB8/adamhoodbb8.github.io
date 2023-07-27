@@ -18,7 +18,7 @@ const ppvs =  [
             "overview":"Wrestlemania 30",
             "matches":[
                 {
-                    "champion":"Daniel Bryan",
+                    "champion":"Bryan Danielson",
                     "championimage":"https://www.wwe.com/f/styles/talent_champion_lg/public/all/2020/01/Daniel_Bryan_Pro--bfcf96f308903d00574ccf88318215f0.png",
                     "challenger":"Triple H",
                     "challengerimage":"https://www.wwe.com/f/styles/talent_champion_lg/public/all/2018/01/TripleH_Pro--56cf96e32ae35b75ff370574dfd29bf0.png"
